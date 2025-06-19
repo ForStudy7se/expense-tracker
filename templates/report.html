@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>📊 Expense Report</title>
+</head>
+<body>
+    <h1>📊 Expense Report</h1>
+
+    <h2>Total Spent 💸: ₹{{ total }}</h2>
+
+    <h3>🗂️ Category-wise Breakdown</h3>
+    <table border="1" style="margin: 0 auto;">
+        <tr>
+            <th>📁 Category</th>
+            <th>💰 Total Amount</th>
+        </tr>
+        {% for category, amount in category_data.items() %}
+        <tr>
+            <td>{{ category }}</td>
+            <td>₹{{ amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/"><button>🏠 Back to Home</button></a>
+</body>
+</html>

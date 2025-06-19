@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>📋 Your Expenses</h2>
+
+    {% for exp in expenses %}
+        <div class="card">
+            <p>
+                📅 <strong>{{ exp.date }}</strong> |
+                💵 <strong>₹{{ exp.amount }}</strong> |
+                🗂️ <strong>{{ exp.category }}</strong><br>
+                📝 {{ exp.note }}
+            </p>
+
+            <!-- Delete Button -->
+            <form method="POST" action="{{ url_for('delete_expense', id=exp.id) }}" style="margin-top: 5px;">
+                <button type="submit" onclick="return confirm('Delete this expense?')">🗑️ Delete</button>
+            </form>
+        </div>
+    {% else %}
+        <p style="margin-top: 20px;">🚫 No expenses added yet.</p>
+    {% endfor %}
+{% endblock %}
