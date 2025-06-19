@@ -69,7 +69,7 @@ expense_tracker/
 
 1. **Clone the repo:**
 ```bash
-git clone https://github.com/yourusername/expense_tracker.git
+git clone https://github.com/ForStudy7se/expense-tracker.git
 cd expense_tracker
 ```
 
@@ -117,4 +117,4 @@ http://127.0.0.1:5000
 ## 🙋‍♀️ Made by
 
 KIRTI VISPUTE — with ❤️ and Flask.  
-[GitHub](https://github.com/yourusername)
+[GitHub](https://github.com/ForStudy7se)
